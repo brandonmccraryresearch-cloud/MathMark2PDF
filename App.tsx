@@ -235,16 +235,18 @@ function App() {
       </div>
 
       {/* Print View (Only visible when printing) */}
-      <div className="hidden print:block bg-white h-auto w-full">
-         <div className="prose prose-red max-w-none">
-             <h1 className="text-4xl font-bold mb-4">{doc.title}</h1>
-             <ReactMarkdown 
-                remarkPlugins={[remarkGfm, remarkMath]}
-                rehypePlugins={[rehypeKatex]}
-                components={markdownComponents}
-            >
-                {doc.content}
-            </ReactMarkdown>
+      <div className="hidden print:block bg-white h-auto w-full p-8">
+         <div className="prose prose-red max-w-none" style={{ maxWidth: 'none' }}>
+             <h1 className="text-4xl font-bold mb-6 pb-2 border-b-2 border-gray-300">{doc.title}</h1>
+             <div className="markdown-content">
+               <ReactMarkdown 
+                  remarkPlugins={[remarkGfm, remarkMath]}
+                  rehypePlugins={[rehypeKatex]}
+                  components={markdownComponents}
+              >
+                  {doc.content}
+              </ReactMarkdown>
+             </div>
          </div>
       </div>
     </div>

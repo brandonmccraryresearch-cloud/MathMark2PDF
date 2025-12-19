@@ -1,0 +1,181 @@
+/* Import KaTeX CSS */
+@import 'katex/dist/katex.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #a3a3a3; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #737373; 
+}
+
+/* Print Styles for PDF Export */
+@media print {
+  @page {
+    margin: 15mm;
+    size: A4;
+  }
+
+  /* Reset container styles for printing */
+  html, body, #root, .h-screen, .h-full, .overflow-hidden {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    background-color: white !important;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+
+  /* Hide screen-only elements */
+  .no-print, .print\\:hidden {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  .print\\:block {
+    display: block !important;
+  }
+
+  /* Preserve colors for PDF */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Links styling */
+  a {
+    text-decoration: underline;
+    color: #DC2626 !important;
+  }
+
+  /* Prevent page breaks after headings */
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  /* Prevent page breaks inside elements */
+  p, pre, blockquote, ul, ol, dl, figure, img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Tables can break but avoid breaking rows */
+  table {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  /* Code blocks formatting */
+  pre {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow: visible !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  code {
+    background-color: #f3f4f6 !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+  }
+
+  /* Ensure math formulas print correctly with proper sizing */
+  .katex, .katex-display {
+    font-size: 1em !important;
+    overflow: visible !important;
+  }
+
+  .katex-display {
+    margin: 1em 0 !important;
+  }
+
+  /* Markdown content styling for print */
+  .markdown-content {
+    font-family: 'Inter', sans-serif !important;
+  }
+
+  .markdown-content h1 {
+    font-size: 24pt !important;
+    margin-top: 0 !important;
+    margin-bottom: 12pt !important;
+  }
+
+  .markdown-content h2 {
+    font-size: 20pt !important;
+    margin-top: 16pt !important;
+    margin-bottom: 10pt !important;
+  }
+
+  .markdown-content h3 {
+    font-size: 16pt !important;
+    margin-top: 12pt !important;
+    margin-bottom: 8pt !important;
+  }
+
+  .markdown-content p {
+    margin-bottom: 8pt !important;
+  }
+
+  .markdown-content ul, .markdown-content ol {
+    margin: 8pt 0 !important;
+    padding-left: 20pt !important;
+  }
+
+  .markdown-content li {
+    margin-bottom: 4pt !important;
+  }
+
+  .markdown-content blockquote {
+    border-left: 4px solid #FFD700 !important;
+    padding-left: 12pt !important;
+    margin: 12pt 0 !important;
+    color: #4b5563 !important;
+  }
+
+  .markdown-content table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 12pt 0 !important;
+  }
+
+  .markdown-content th,
+  .markdown-content td {
+    border: 1px solid #d1d5db !important;
+    padding: 6pt 8pt !important;
+    text-align: left !important;
+  }
+
+  .markdown-content th {
+    background-color: #f9fafb !important;
+    font-weight: bold !important;
+  }
+}
