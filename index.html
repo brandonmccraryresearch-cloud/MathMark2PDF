@@ -4,116 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MathMark2PDF | Markdown & LaTeX Editor</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                black: '#111111',
-                gold: '#FFD700',
-                red: '#DC2626',
-                dark: '#0a0a0a',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #a3a3a3; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #737373; 
-      }
-
-      /* Print Styles for PDF Export */
-      @media print {
-        @page {
-          margin: 15mm;
-          size: auto;
-        }
-
-        html, body, #root, .h-screen, .h-full, .overflow-hidden {
-          height: auto !important;
-          min-height: 0 !important;
-          overflow: visible !important;
-          display: block !important;
-          position: static !important;
-          width: 100% !important;
-          margin: 0 !important;
-          padding: 0 !important;
-        }
-
-        body {
-            background-color: white !important;
-        }
-
-        .no-print {
-          display: none !important;
-        }
-
-        * {
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-        }
-
-        a {
-            text-decoration: underline;
-            color: #DC2626 !important;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            break-after: avoid;
-        }
-        
-        p, pre, blockquote, ul, ol, dl, table, img {
-            break-inside: avoid;
-        }
-        
-        pre {
-            white-space: pre-wrap !important;
-            word-wrap: break-word !important;
-        }
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react/": "https://esm.sh/react@18.2.0/",
-    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
-    "react-dom": "https://esm.sh/react-dom@18.2.0",
-    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.2.0",
-    "react-markdown": "https://esm.sh/react-markdown@9.0.1?bundle&deps=react@18.2.0",
-    "remark-gfm": "https://esm.sh/remark-gfm@4.0.0?bundle",
-    "remark-math": "https://esm.sh/remark-math@6.0.0?bundle",
-    "rehype-katex": "https://esm.sh/rehype-katex@7.0.0?bundle",
-    "katex": "https://esm.sh/katex@0.16.9"
-  }
-}
-</script>
-</head>
+  </head>
   <body class="bg-gray-50 text-gray-900 h-screen overflow-hidden">
     <div id="root" class="h-full"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
