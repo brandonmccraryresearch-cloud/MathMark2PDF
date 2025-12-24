@@ -159,7 +159,15 @@ function App() {
     .katex {
       font-family: 'Noto Sans Math', 'Times New Roman', serif !important;
     }
-    .katex * {
+    .katex .mathnormal,
+    .katex .mathit,
+    .katex .mathrm,
+    .katex .mord,
+    .katex .mbin,
+    .katex .mrel,
+    .katex .mop,
+    .katex .delimsizing,
+    .katex .sizing {
       font-family: 'Noto Sans Math', 'Times New Roman', serif !important;
     }
     @media (max-width: 767px) {

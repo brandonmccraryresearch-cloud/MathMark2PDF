@@ -122,8 +122,16 @@
     margin: 1em 0 !important;
   }
   
-  /* Ensure Noto Sans Math is used for all math elements in print */
-  .katex * {
+  /* Ensure Noto Sans Math is used for all common math element classes in print */
+  .katex .mathnormal,
+  .katex .mathit,
+  .katex .mathrm,
+  .katex .mord,
+  .katex .mbin,
+  .katex .mrel,
+  .katex .mop,
+  .katex .delimsizing,
+  .katex .sizing {
     font-family: 'Noto Sans Math', 'Times New Roman', serif !important;
   }
 
