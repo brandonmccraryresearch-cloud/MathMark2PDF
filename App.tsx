@@ -111,10 +111,23 @@ function App() {
   <title>${doc.title}</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'Noto Sans';
+      src: url('https://fonts.gstatic.com/s/notosans/v36/o-0IIpQlx3QUlC5A4PNr5TRA.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Noto Sans';
+      src: url('https://fonts.gstatic.com/s/notosans/v36/o-0OIpQlx3QUlC5A4PNr6DRAW_0.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
     body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Noto Sans', sans-serif;
         background-color: #ffffff;
         margin: 0;
         padding: 0;
