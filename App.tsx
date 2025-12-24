@@ -126,6 +126,13 @@ function App() {
       font-style: normal;
       font-display: swap;
     }
+    @font-face {
+      font-family: 'Noto Sans Math';
+      src: url('https://fonts.gstatic.com/s/notosansmath/v1/7Aump_cpwWIYV0M_5I9l59A.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
     body {
         font-family: 'Noto Sans', sans-serif;
         background-color: #ffffff;
@@ -147,6 +154,21 @@ function App() {
     }
     .markdown-body a:hover {
         text-decoration: underline;
+    }
+    /* Use Noto Sans Math for KaTeX math rendering */
+    .katex {
+      font-family: 'Noto Sans Math', 'Times New Roman', serif !important;
+    }
+    .katex .mathnormal,
+    .katex .mathit,
+    .katex .mathrm,
+    .katex .mord,
+    .katex .mbin,
+    .katex .mrel,
+    .katex .mop,
+    .katex .delimsizing,
+    .katex .sizing {
+      font-family: 'Noto Sans Math', 'Times New Roman', serif !important;
     }
     @media (max-width: 767px) {
       .markdown-body {

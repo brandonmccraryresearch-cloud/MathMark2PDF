@@ -115,10 +115,24 @@
   .katex, .katex-display {
     font-size: 1em !important;
     overflow: visible !important;
+    font-family: 'Noto Sans Math', 'Times New Roman', serif !important;
   }
 
   .katex-display {
     margin: 1em 0 !important;
+  }
+  
+  /* Ensure Noto Sans Math is used for all common math element classes in print */
+  .katex .mathnormal,
+  .katex .mathit,
+  .katex .mathrm,
+  .katex .mord,
+  .katex .mbin,
+  .katex .mrel,
+  .katex .mop,
+  .katex .delimsizing,
+  .katex .sizing {
+    font-family: 'Noto Sans Math', 'Times New Roman', serif !important;
   }
 
   /* Markdown content styling for print */
