@@ -89,12 +89,89 @@
 }
 
 /* Configure KaTeX to use Noto Sans Math */
+/* Override all KaTeX font families to use Noto Sans Math */
 .katex {
   font-family: 'Noto Sans Math', 'KaTeX_Main', 'Times New Roman', serif !important;
 }
 
+/* Override all KaTeX math element classes */
 .katex .mathnormal,
 .katex .mathit,
-.katex .mathrm {
+.katex .mathrm,
+.katex .text,
+.katex .mord,
+.katex .mbin,
+.katex .mrel,
+.katex .mop,
+.katex .mopen,
+.katex .mclose,
+.katex .mpunct,
+.katex .minner,
+.katex .msupsub,
+.katex .delimsizing,
+.katex .sizing,
+.katex .op-symbol,
+.katex .accent,
+.katex .frac-line,
+.katex .sqrt,
+.katex .vlist-t,
+.katex .vlist-r {
   font-family: 'Noto Sans Math', 'KaTeX_Math', 'Times New Roman', serif !important;
+}
+
+/* Override specific KaTeX font family classes */
+.katex .amsrm,
+.katex .ams {
+  font-family: 'Noto Sans Math', 'KaTeX_AMS', 'Times New Roman', serif !important;
+}
+
+.katex .cal,
+.katex .mathcal {
+  font-family: 'Noto Sans Math', 'KaTeX_Caligraphic', 'Times New Roman', serif !important;
+}
+
+.katex .frak,
+.katex .mathfrak {
+  font-family: 'Noto Sans Math', 'KaTeX_Fraktur', 'Times New Roman', serif !important;
+}
+
+.katex .bb,
+.katex .mathbb {
+  font-family: 'Noto Sans Math', 'KaTeX_Main', 'Times New Roman', serif !important;
+}
+
+.katex .sf,
+.katex .mathsf,
+.katex .textsf {
+  font-family: 'Noto Sans Math', 'KaTeX_SansSerif', 'Times New Roman', serif !important;
+}
+
+.katex .tt,
+.katex .mathtt,
+.katex .texttt {
+  font-family: 'Noto Sans Math', 'KaTeX_Typewriter', 'Times New Roman', serif !important;
+}
+
+.katex .script,
+.katex .mathscr {
+  font-family: 'Noto Sans Math', 'KaTeX_Script', 'Times New Roman', serif !important;
+}
+
+/* Override KaTeX sizing fonts */
+.katex .delimsizing.size1,
+.katex .op-symbol.small-op {
+  font-family: 'Noto Sans Math', 'KaTeX_Size1', 'Times New Roman', serif !important;
+}
+
+.katex .delimsizing.size2,
+.katex .op-symbol.large-op {
+  font-family: 'Noto Sans Math', 'KaTeX_Size2', 'Times New Roman', serif !important;
+}
+
+.katex .delimsizing.size3 {
+  font-family: 'Noto Sans Math', 'KaTeX_Size3', 'Times New Roman', serif !important;
+}
+
+.katex .delimsizing.size4 {
+  font-family: 'Noto Sans Math', 'KaTeX_Size4', 'Times New Roman', serif !important;
 }
